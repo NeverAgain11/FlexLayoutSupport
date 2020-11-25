@@ -1,11 +1,12 @@
 use_frameworks!
 
+inhibit_all_warnings!
+
 target 'FlexBoxSupport_Example' do
   pod 'FlexBoxSupport', :path => '../'
-
-  target 'FlexBoxSupport_Tests' do
-    inherit! :search_paths
-
-    
-  end
+  pod 'PinLayout', '1.7.9'
+  pod 'Kingfisher', '~> 4.8.0'
+  
+  pod 'LookinServer', :configurations => ['Debug']
+  
 end
