@@ -13,12 +13,12 @@ import UIKit
 public typealias FlexBuilder = () -> _FlexLayoutElementType
 
 public protocol _FlexLayoutElementType {
-    func make() -> [Flex]
+    func make() -> [UIView]
 }
 
 extension Array: _FlexLayoutElementType where Element: _FlexLayoutElementType {
     
-    public func make() -> [Flex] {
+    public func make() -> [UIView] {
         self.flatMap {
             $0.make()
         }
@@ -62,6 +62,7 @@ public struct FlexLayoutBuilder {
     public static func buildEither(second: _FlexLayoutElementType) -> _FlexLayoutElementType {
         second
     }
+    
 }
 
 public struct MultiLayout : _FlexLayoutElementType {
@@ -72,14 +73,18 @@ public struct MultiLayout : _FlexLayoutElementType {
         self.elements = elements
     }
     
-    public func make() -> [Flex] {
+    public func make() -> [UIView] {
         elements.compactMap { $0 }.flatMap { $0.make() }
     }
 }
 
+extension UIView {
+    
+}
+
 public struct FlexLayout: _FlexLayoutElementType {
-    public func make() -> [Flex] {
-        [view.flex]
+    public func make() -> [UIView] {
+        [view]
     }
     
     public enum Direction {
@@ -99,14 +104,12 @@ public struct FlexLayout: _FlexLayoutElementType {
     let view: UIView
     
     @discardableResult
-    public init(direction: Direction, background: UIView = UIView(), @FlexLayoutBuilder builder: FlexBuilder) {
+    public init(direction: Direction, background: UIView, @FlexLayoutBuilder builder: FlexBuilder) {
         self.view = background
         
-        view.flex.direction(direction.direction)
+        view.build(builder)
         
-        view.flex.define { (flex) in
-            builder().make().compactMap { $0.view }.forEach { flex.addItem($0) }
-        }
+        view.flex.direction(direction.direction)
         
     }
     
@@ -118,9 +121,10 @@ public struct FlexLayout: _FlexLayoutElementType {
 extension Flex {
     @discardableResult
     public func build(@FlexLayoutBuilder _ builder: FlexBuilder) -> Flex  {
-        define { (flex) in
-            builder().make().compactMap { $0.view }.forEach { addItem($0) }
-        }
+        let views = builder().make()
+        
+        views.forEach { addItem($0) }
+        
         return self
     }
 }
@@ -134,13 +138,16 @@ extension UIView {
 }
 
 extension UIView: _FlexLayoutElementType {
-    public func make() -> [Flex] {
-        [flex]
+    public func make() -> [UIView] {
+        [self]
     }
 }
 
 extension Flex: _FlexLayoutElementType {
-    public func make() -> [Flex] {
-        [self]
+    public func make() -> [UIView] {
+        if let view = view {
+            return [view]
+        }
+        return []
     }
 }

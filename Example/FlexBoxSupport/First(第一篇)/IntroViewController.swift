@@ -39,20 +39,29 @@ class IntroViewController: UIViewController {
         bottomLabel.text = "FlexLayout/yoga is incredibly fast, its even faster than manual layout."
         bottomLabel.numberOfLines = 0
         
-        rootFlexContainer.build {
-            FlexLayout(direction: .horizontal) {
-                imageView.flex.width(100).aspectRatio(of: imageView)
-                FlexLayout(direction: .vertical) {
-                    segmentedControl.flex.marginBottom(12)
-                    label.flex.shrink(1)
-                }.flex.shrink(1).marginLeft(12)
-            }.flex.maxHeight(130)
+        
+        FlexLayout(direction: .vertical, background: rootFlexContainer) {
+            FlexLayout(direction: .horizontal, background: UIView()) {
+//                imageView.flex.width(100).aspectRatio(of: imageView)
+//                UIView().flex.height(1/UIScreen.main.scale).backgroundColor(.lightGray)
+            }.flex.maxHeight(130).backgroundColor(.purple)
+        }.flex.padding(12)
+        
+        print("rootFlexContainer: ", rootFlexContainer)
+//        rootFlexContainer.build {
+//            FlexLayout(direction: .horizontal, background: UIView()) {
+//                imageView.flex.width(100).aspectRatio(of: imageView)
+//                FlexLayout(direction: .vertical, background: UIView()) {
+//                    segmentedControl.flex.marginBottom(12)
+//                    label.flex.shrink(1)
+//                }.flex.shrink(1).marginLeft(12)
+//            }.flex.maxHeight(130)
             
-            FlexLayout(direction: .vertical) {
-                UIView().flex.height(1/UIScreen.main.scale).backgroundColor(.lightGray)
-                bottomLabel.flex.marginTop(60).marginHorizontal(20)
-            }.flex.marginTop(12)
-        }.padding(12)
+//            FlexLayout(direction: .vertical, background: UIView()) {
+////                UIView().flex.height(1/UIScreen.main.scale).backgroundColor(.lightGray)
+//                bottomLabel.flex.marginTop(60).marginHorizontal(20)
+//            }.flex.marginTop(12)
+//        }.padding(12)
         
 //        rootFlexContainer.flex.padding(12).define { flex in
 //            flex.addItem().direction(.row).define { flex in

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FlexBoxSupport'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'FunctionBuilder for FlexBoxSupport.'
 
   s.homepage         = 'https://github.com/NeverAgain11/FlexLayoutSupport'
@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'FlexBoxSupport/Classes/**/*'
+  s.source_files = 'Sources/**/*'
   
   # s.resource_bundles = {
   #   'FlexBoxSupport' => ['FlexBoxSupport/Assets/*.png']

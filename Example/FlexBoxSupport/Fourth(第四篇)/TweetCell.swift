@@ -88,7 +88,7 @@ class TweetCell: UITableViewCell {
         shareBtn = createButton(title: "", icon: "icon_share")
         
         FlexLayout(direction: .vertical, background: contentView) {
-            FlexLayout(direction: .horizontal) {
+            FlexLayout(direction: .horizontal, background: UIView()) {
                 
             }.flex.alignItems(.center).marginTop(13)
         }.flex.paddingHorizontal(13)

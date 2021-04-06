@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30B5C9BF948D55449F12D5D1 /* Pods_FlexBoxSupport_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F53EEACF4B366FA18C0C534F /* Pods_FlexBoxSupport_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		CC3C2DFD89EF57D308D43024 /* Pods_FlexBoxSupport_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A666440988C161794CE1FDD1 /* Pods_FlexBoxSupport_Example.framework */; };
 		D432B6C5256DFA5C00CF1F66 /* NovelSummaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432B6B7256DFA5C00CF1F66 /* NovelSummaryVC.swift */; };
 		D432B6C6256DFA5C00CF1F66 /* TweetStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432B6B9256DFA5C00CF1F66 /* TweetStore.swift */; };
 		D432B6C7256DFA5C00CF1F66 /* tweets.json in Resources */ = {isa = PBXBuildFile; fileRef = D432B6BA256DFA5C00CF1F66 /* tweets.json */; };
@@ -25,6 +25,8 @@
 		D432B6CE256DFA5C00CF1F66 /* MyWalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432B6C3256DFA5C00CF1F66 /* MyWalletView.swift */; };
 		D432B6CF256DFA5C00CF1F66 /* MyWalletVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432B6C4256DFA5C00CF1F66 /* MyWalletVC.swift */; };
 		D432B6D2256DFA6700CF1F66 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432B6D1256DFA6700CF1F66 /* TableViewController.swift */; };
+		D44E263F261BED4200E5E227 /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44E263E261BED4200E5E227 /* Then.swift */; };
+		D4915773261719E00049663C /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4915772261719E00049663C /* DemoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +42,6 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		A666440988C161794CE1FDD1 /* Pods_FlexBoxSupport_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlexBoxSupport_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC548DCD16E43AFD34BC5AB4 /* Pods_FlexBoxSupport_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlexBoxSupport_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0979441075AFEF880CF216C /* Pods-FlexBoxSupport_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexBoxSupport_Tests.release.xcconfig"; path = "Target Support Files/Pods-FlexBoxSupport_Tests/Pods-FlexBoxSupport_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		D3F1284C0F25C51EA0A67379 /* Pods-FlexBoxSupport_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexBoxSupport_Example.release.xcconfig"; path = "Target Support Files/Pods-FlexBoxSupport_Example/Pods-FlexBoxSupport_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -57,8 +58,11 @@
 		D432B6C4256DFA5C00CF1F66 /* MyWalletVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWalletVC.swift; sourceTree = "<group>"; };
 		D432B6D1256DFA6700CF1F66 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		D432B6E2256DFB2D00CF1F66 /* FlexBoxSupport_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FlexBoxSupport_Example-Bridging-Header.h"; sourceTree = "<group>"; };
+		D44E263E261BED4200E5E227 /* Then.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
+		D4915772261719E00049663C /* DemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
 		EE3EFB92FD4ADAED1C7DB5A9 /* Pods-FlexBoxSupport_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexBoxSupport_Tests.debug.xcconfig"; path = "Target Support Files/Pods-FlexBoxSupport_Tests/Pods-FlexBoxSupport_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		EFAB7D233DAF97AC8D9B70E1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		F53EEACF4B366FA18C0C534F /* Pods_FlexBoxSupport_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlexBoxSupport_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC3C2DFD89EF57D308D43024 /* Pods_FlexBoxSupport_Example.framework in Frameworks */,
+				30B5C9BF948D55449F12D5D1 /* Pods_FlexBoxSupport_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,8 +80,8 @@
 		13B3A0E87C70F498C79D5DAC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A666440988C161794CE1FDD1 /* Pods_FlexBoxSupport_Example.framework */,
 				CC548DCD16E43AFD34BC5AB4 /* Pods_FlexBoxSupport_Tests.framework */,
+				F53EEACF4B366FA18C0C534F /* Pods_FlexBoxSupport_Example.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -113,6 +117,7 @@
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 				D432B6E2256DFB2D00CF1F66 /* FlexBoxSupport_Example-Bridging-Header.h */,
+				D44E263E261BED4200E5E227 /* Then.swift */,
 			);
 			name = "Example for FlexBoxSupport";
 			path = FlexBoxSupport;
@@ -180,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				D432B6B7256DFA5C00CF1F66 /* NovelSummaryVC.swift */,
+				D4915772261719E00049663C /* DemoViewController.swift */,
 			);
 			path = "Second(第二篇)";
 			sourceTree = "<group>";
@@ -354,7 +360,9 @@
 				D432B6CF256DFA5C00CF1F66 /* MyWalletVC.swift in Sources */,
 				D432B6CC256DFA5C00CF1F66 /* BCZViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				D4915773261719E00049663C /* DemoViewController.swift in Sources */,
 				D432B6CE256DFA5C00CF1F66 /* MyWalletView.swift in Sources */,
+				D44E263F261BED4200E5E227 /* Then.swift in Sources */,
 				D432B6CB256DFA5C00CF1F66 /* IntroViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -512,6 +520,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.connect.FlexBoxSupport-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "FlexBoxSupport/FlexBoxSupport_Example-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};

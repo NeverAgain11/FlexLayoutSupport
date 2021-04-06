@@ -127,7 +127,7 @@ class MyWalletView: UIView {
                 mainContainer
             }.flex.grow(1).shrink(1)
             
-            FlexLayout(direction: .horizontal) {
+            FlexLayout(direction: .horizontal, background: UIView()) {
                 lockIcon.flex.width(20).marginHorizontal(20).aspectRatio(of: lockIcon)
                 depositLabel.flex.marginRight(20).grow(1).shrink(1)
                 depositDetailBtn.flex.paddingHorizontal(10).marginRight(14)
@@ -138,14 +138,14 @@ class MyWalletView: UIView {
             titleLabel.flex.marginTop(30).marginBottom(18)
             
             FlexLayout(direction: .vertical, background: posterImgV) {
-                FlexLayout(direction: .vertical) {
+                FlexLayout(direction: .vertical, background: UIView()) {
                     posterTitleLabel
                     posterSubtitleLabel
                 }.flex.grow(1).marginLeft(20).paddingVertical(20).justifyContent(.spaceBetween)
             }.flex.width(100%).aspectRatio(67/40).marginBottom(15)
             
             FlexLayout(direction: .vertical, background: cardInfoContainer) {
-                FlexLayout(direction: .vertical) {
+                FlexLayout(direction: .vertical, background: UIView()) {
                     cardTitleLabel
                     remainDaysLabel.flex.marginTop(4)
                 }
@@ -209,25 +209,25 @@ extension MyWalletView {
         subtitleLabel.font = UIFont.systemFont(ofSize: 14)
         subtitleLabel.textColor = UIColor(white: 0.3, alpha: 1)
         
-        let f = FlexLayout(direction: .vertical) {
-            FlexLayout(direction: .horizontal) {
-                titleLabel.flex.grow(1).shrink(1)
-                subtitleLabel.flex.marginHorizontal(10)
-                arrow.flex.size(15).alignSelf(.center)
-            }.flex.grow(1)
-            UIView().flex.backgroundColor(UIColor(white: 0.85, alpha: 1)).height(0.5)
-        }.flex.paddingHorizontal(15).height(55)
-        let v = f.view!
-//        let v = UIView()
-//        v.flex.direction(.row).paddingHorizontal(15).height(55).define { flex in
-//            flex.addItem(titleLabel).grow(1).shrink(1)
-//            flex.addItem(subtitleLabel).marginHorizontal(10)
-//            flex.addItem(arrow).size(15).alignSelf(.center)
-//            // 分隔线
-//            flex.addItem().position(.absolute).height(0.5).width(100%).left(15).bottom(0)
-//                .backgroundColor(UIColor(white: 0.85, alpha: 1))
-//            flex.addItem(btn).position(.absolute).left(0).top(0).width(100%).height(100%)
-//        }
+//        let f = FlexLayout(direction: .vertical) {
+//            FlexLayout(direction: .horizontal) {
+//                titleLabel.flex.grow(1).shrink(1)
+//                subtitleLabel.flex.marginHorizontal(10)
+//                arrow.flex.size(15).alignSelf(.center)
+//            }.flex.grow(1)
+//            UIView().flex.backgroundColor(UIColor(white: 0.85, alpha: 1)).height(0.5)
+//        }.flex.paddingHorizontal(15).height(55)
+//        let v = f.view!
+        let v = UIView()
+        v.flex.direction(.row).paddingHorizontal(15).height(55).define { flex in
+            flex.addItem(titleLabel).grow(1).shrink(1)
+            flex.addItem(subtitleLabel).marginHorizontal(10)
+            flex.addItem(arrow).size(15).alignSelf(.center)
+            // 分隔线
+            flex.addItem().position(.absolute).height(0.5).width(100%).left(15).bottom(0)
+                .backgroundColor(UIColor(white: 0.85, alpha: 1))
+            flex.addItem(btn).position(.absolute).left(0).top(0).width(100%).height(100%)
+        }
         return (v, btn, subtitleLabel)
     }
     

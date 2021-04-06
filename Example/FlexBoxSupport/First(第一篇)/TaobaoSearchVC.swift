@@ -59,21 +59,21 @@ class TaobaoSearchVC: UIViewController {
         
         rootFlexContainer.flex.padding(10).build {
             
-            FlexLayout(direction: .horizontal) {
+            FlexLayout(direction: .horizontal, background: UIView()) {
                 histLabel
                 delButton
             }.flex.justifyContent(.spaceBetween)
-            FlexLayout(direction: .horizontal) {
+            FlexLayout(direction: .horizontal, background: UIView()) {
                 historyTagButtons.map {
                     $0.flex.marginRight(10).paddingHorizontal(12).marginTop(10)
                 }
             }.flex.wrap(.wrap).marginBottom(15)
-            FlexLayout(direction: .horizontal) {
+            FlexLayout(direction: .horizontal, background: UIView()) {
                 disLabel
                 seeButton
             }.flex.justifyContent(.spaceBetween)
             
-            FlexLayout(direction: .horizontal) {
+            FlexLayout(direction: .horizontal, background: UIView()) {
                 discoverTagButtons.map { button -> Flex in
                     button.flex.marginRight(8).paddingHorizontal(12).marginTop(10)
                 }

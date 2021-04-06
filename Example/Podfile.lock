@@ -24,7 +24,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FlexBoxSupport: b13348defc2b06cb4791dbeb486005d2bd9d38b9
+  FlexBoxSupport: e2eabcc8e0dda32a8735617c810f721af6db3305
   FlexLayout: 025dd153bd5618dcc9f93ef914106d7dc2a86fdc
   Kingfisher: 868c1149679a7ab6869be118faa9b5aed154aaf0
   LookinServer: 0002891cd3cec5e082a910e897dfe71b4f06b89e
@@ -32,4 +32,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: f092e9cad3ec0ca04cf899a4bb7b3c4ea306e0ad
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.10.1

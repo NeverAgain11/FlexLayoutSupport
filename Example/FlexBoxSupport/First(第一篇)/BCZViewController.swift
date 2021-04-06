@@ -66,36 +66,36 @@ class BCZViewController: UIViewController {
         // 每次用它俩的百分比都会导致莫名的坑, 所以暂不建议使用marginTop, marginBottom的百分比方法
         // 这里折中使用屏幕高度百分比来计算值
         
-        FlexLayout(direction: .vertical, background: rootFlexContainer) {
-            logoImgV.flex.width(30%).marginTop(ScreenHeight * 0.18).aspectRatio(1)
-            UIView().flex.grow(1).shrink(1)
-            
-            FlexLayout(direction: .vertical) {
-                wechatBtn.flex.height(buttonHeight).marginBottom(10)
-                qqBtn.flex.height(buttonHeight).marginBottom(10)
-                FlexLayout(direction: .horizontal) {
-                    phoneBtn.flex.width(62%).marginRight(10)
-                    loginBtn.flex.grow(1)
-                }.flex.height(buttonHeight)
-            }.flex.justifyContent(.center).width(73%).height(24%).marginBottom(ScreenHeight * 0.1)
-            
-            otherBtn.flex.marginBottom(20)
-        }.flex.alignItems(.center)
+//        FlexLayout(direction: .vertical, background: rootFlexContainer) {
+//            logoImgV.flex.width(30%).marginTop(ScreenHeight * 0.18).aspectRatio(1)
+//            UIView().flex.grow(1).shrink(1)
+//
+//            FlexLayout(direction: .vertical) {
+//                wechatBtn.flex.height(buttonHeight).marginBottom(10)
+//                qqBtn.flex.height(buttonHeight).marginBottom(10)
+//                FlexLayout(direction: .horizontal) {
+//                    phoneBtn.flex.width(62%).marginRight(10)
+//                    loginBtn.flex.grow(1)
+//                }.flex.height(buttonHeight)
+//            }.flex.justifyContent(.center).width(73%).height(24%).marginBottom(ScreenHeight * 0.1)
+//
+//            otherBtn.flex.marginBottom(20)
+//        }.flex.alignItems(.center)
         
-//        rootFlexContainer.flex.alignItems(.center).define { flex in
-//            flex.addItem(logoImgV).width(30%).marginTop(ScreenHeight * 0.18).aspectRatio(1)
-//            flex.addItem().grow(1).shrink(1) // 占位弹簧
-//            flex.addItem().justifyContent(.center).width(73%)
-//                .height(24%).marginBottom(ScreenHeight * 0.1).define { flex in
-//                    flex.addItem(wechatBtn).height(buttonHeight).marginBottom(10)
-//                    flex.addItem(qqBtn).height(buttonHeight).marginBottom(10)
-//                    flex.addItem().direction(.row).height(buttonHeight).define { flex in
-//                        flex.addItem(phoneBtn).width(62%).marginRight(10)
-//                        flex.addItem(loginBtn).grow(1)
-//                    }
-//            }
-//            flex.addItem(otherBtn).marginBottom(20)
-//        }
+        rootFlexContainer.flex.alignItems(.center).define { flex in
+            flex.addItem(logoImgV).width(30%).marginTop(ScreenHeight * 0.18).aspectRatio(1)
+            flex.addItem().grow(1).shrink(1) // 占位弹簧
+            flex.addItem().justifyContent(.center).width(73%)
+                .height(24%).marginBottom(ScreenHeight * 0.1).define { flex in
+                    flex.addItem(wechatBtn).height(buttonHeight).marginBottom(10)
+                    flex.addItem(qqBtn).height(buttonHeight).marginBottom(10)
+                    flex.addItem().direction(.row).height(buttonHeight).define { flex in
+                        flex.addItem(phoneBtn).width(62%).marginRight(10)
+                        flex.addItem(loginBtn).grow(1)
+                    }
+            }
+            flex.addItem(otherBtn).marginBottom(20)
+        }
     }
     
     
