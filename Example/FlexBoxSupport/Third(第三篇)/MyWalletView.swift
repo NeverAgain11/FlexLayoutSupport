@@ -122,37 +122,39 @@ class MyWalletView: UIView {
         depositDetailBtn.layer.borderColor = UIColor.darkGray.cgColor
         depositDetailBtn.layer.borderWidth = 0.5
         
+        let p = UIView()
+        
         FlexLayout(direction: .vertical, background: rootFlex) {
             FlexLayout(direction: .vertical, background: mainScroll) {
                 mainContainer
-            }.flex.grow(1).shrink(1)
+            }.grow(1).shrink(1)
             
-            FlexLayout(direction: .horizontal, background: UIView()) {
-                lockIcon.flex.width(20).marginHorizontal(20).aspectRatio(of: lockIcon)
-                depositLabel.flex.marginRight(20).grow(1).shrink(1)
-                depositDetailBtn.flex.paddingHorizontal(10).marginRight(14)
-            }.flex.alignItems(.center).height(60).backgroundColor(UIColor(white: 0.93, alpha: 1))
+            FlexLayout(direction: .horizontal) {
+                lockIcon.box.width(20).marginHorizontal(20).aspectRatio(of: lockIcon)
+                depositLabel.box.marginRight(20).grow(1).shrink(1)
+                depositDetailBtn.box.paddingHorizontal(10).marginRight(14)
+            }.alignItems(.center).height(60).backgroundColor(UIColor(white: 0.93, alpha: 1))
         }
         
         FlexLayout(direction: .vertical, background: mainContainer) {
-            titleLabel.flex.marginTop(30).marginBottom(18)
+            titleLabel.box.marginTop(30).marginBottom(18)
             
             FlexLayout(direction: .vertical, background: posterImgV) {
-                FlexLayout(direction: .vertical, background: UIView()) {
+                FlexLayout(direction: .vertical) {
                     posterTitleLabel
                     posterSubtitleLabel
-                }.flex.grow(1).marginLeft(20).paddingVertical(20).justifyContent(.spaceBetween)
-            }.flex.width(100%).aspectRatio(67/40).marginBottom(15)
+                }.grow(1).marginLeft(20).paddingVertical(20).justifyContent(.spaceBetween)
+            }.width(100%).aspectRatio(67/40).marginBottom(15)
             
             FlexLayout(direction: .vertical, background: cardInfoContainer) {
-                FlexLayout(direction: .vertical, background: UIView()) {
+                FlexLayout(direction: .vertical) {
                     cardTitleLabel
-                    remainDaysLabel.flex.marginTop(4)
+                    remainDaysLabel.box.marginTop(4)
                 }
-                UIView().flex.grow(1).shrink(1)
+                UIView().box.grow(1).shrink(1).backgroundColor(.yellow)
                 tipsLabel
-                daysDetailBtn.flex.marginLeft(14).paddingHorizontal(20).height(36)
-            }.flex.direction(.row).padding(20, 20, 20, 14).backgroundColor(.white)
+                daysDetailBtn.box.marginLeft(14).paddingHorizontal(20).height(36)
+            }.direction(.row).padding(20, 20, 20, 14).backgroundColor(.purple)
             
             balanceView
             bonusView
@@ -161,7 +163,7 @@ class MyWalletView: UIView {
                 moreView1
                 moreView2
             }
-        }.flex.paddingHorizontal(20)
+        }.paddingHorizontal(20)
         
     }
     
@@ -170,9 +172,9 @@ class MyWalletView: UIView {
     }
     
     func layout() {
-        rootFlex.flex.margin(pin.safeArea)
-        rootFlex.flex.layout()
-        mainContainer.flex.layout(mode: .adjustHeight)
+        rootFlex.box.margin(pin.safeArea)
+        rootFlex.box.layout()
+        mainContainer.box.layout(mode: .adjustHeight)
     }
     
     override func sizeThatFits(_ size: CGSize) -> CGSize {
@@ -211,13 +213,15 @@ extension MyWalletView {
         
 //        let f = FlexLayout(direction: .vertical) {
 //            FlexLayout(direction: .horizontal) {
-//                titleLabel.flex.grow(1).shrink(1)
-//                subtitleLabel.flex.marginHorizontal(10)
-//                arrow.flex.size(15).alignSelf(.center)
-//            }.flex.grow(1)
-//            UIView().flex.backgroundColor(UIColor(white: 0.85, alpha: 1)).height(0.5)
-//        }.flex.paddingHorizontal(15).height(55)
+//                titleLabel.box.grow(1).shrink(1)
+//                subtitleLabel.box.marginHorizontal(10)
+//                arrow.box.size(15).alignSelf(.center)
+//            }.box.grow(1)
+//            UIView().box.backgroundColor(UIColor(white: 0.85, alpha: 1)).height(0.5)
+//        }.box.paddingHorizontal(15).height(55)
 //        let v = f.view!
+        
+        
         let v = UIView()
         v.flex.direction(.row).paddingHorizontal(15).height(55).define { flex in
             flex.addItem(titleLabel).grow(1).shrink(1)

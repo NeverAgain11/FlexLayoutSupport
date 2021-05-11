@@ -78,10 +78,6 @@ public struct MultiLayout : _FlexLayoutElementType {
     }
 }
 
-extension UIView {
-    
-}
-
 public struct FlexLayout: _FlexLayoutElementType {
     public func make() -> [UIView] {
         [view]
@@ -104,7 +100,7 @@ public struct FlexLayout: _FlexLayoutElementType {
     let view: UIView
     
     @discardableResult
-    public init(direction: Direction, background: UIView, @FlexLayoutBuilder builder: FlexBuilder) {
+    public init(direction: Direction, background: UIView = UIView(), @FlexLayoutBuilder builder: FlexBuilder) {
         self.view = background
         
         view.build(builder)
@@ -113,7 +109,7 @@ public struct FlexLayout: _FlexLayoutElementType {
         
     }
     
-    public var flex: Flex {
+    var flex: Flex {
         return view.flex
     }
 }
@@ -143,11 +139,24 @@ extension UIView: _FlexLayoutElementType {
     }
 }
 
-extension Flex: _FlexLayoutElementType {
+extension BoxKit: _FlexLayoutElementType where Base: UIView {
     public func make() -> [UIView] {
-        if let view = view {
-            return [view]
-        }
-        return []
+        [base]
     }
 }
+
+//extension Flex: _FlexLayoutElementType {
+//    public func make() -> [ViewCapture] {
+//        if let view = view {
+//            return [ViewCapture(view: view)]
+//        }
+//        return []
+//    }
+//
+//    public func make() -> [UIView] {
+//        if let view = view {
+//            return [view]
+//        }
+//        return []
+//    }
+//}

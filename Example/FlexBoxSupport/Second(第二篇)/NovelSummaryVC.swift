@@ -109,12 +109,12 @@ class NovelSummaryVC: UIViewController {
         super.viewDidLayoutSubviews()
         
         if #available(iOS 11.0, *) {
-            rootFlex.flex.marginTop(view.safeAreaInsets.top)
+            rootFlex.box.marginTop(view.safeAreaInsets.top)
         } else {
-            rootFlex.flex.marginTop(topLayoutGuide.length)
+            rootFlex.box.marginTop(topLayoutGuide.length)
         }
         rootFlex.frame = view.bounds
-        rootFlex.flex.layout()
+        rootFlex.box.layout()
     }
     
     

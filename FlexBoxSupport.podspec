@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FlexBoxSupport'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'FunctionBuilder for FlexBoxSupport.'
 
   s.homepage         = 'https://github.com/NeverAgain11/FlexLayoutSupport'

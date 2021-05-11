@@ -62,22 +62,22 @@ class TaobaoSearchVC: UIViewController {
             FlexLayout(direction: .horizontal, background: UIView()) {
                 histLabel
                 delButton
-            }.flex.justifyContent(.spaceBetween)
+            }.justifyContent(.spaceBetween)
             FlexLayout(direction: .horizontal, background: UIView()) {
                 historyTagButtons.map {
-                    $0.flex.marginRight(10).paddingHorizontal(12).marginTop(10)
+                    $0.box.marginRight(10).paddingHorizontal(12).marginTop(10)
                 }
-            }.flex.wrap(.wrap).marginBottom(15)
+            }.wrap(.wrap).marginBottom(15)
             FlexLayout(direction: .horizontal, background: UIView()) {
                 disLabel
                 seeButton
-            }.flex.justifyContent(.spaceBetween)
+            }.justifyContent(.spaceBetween)
             
             FlexLayout(direction: .horizontal, background: UIView()) {
-                discoverTagButtons.map { button -> Flex in
-                    button.flex.marginRight(8).paddingHorizontal(12).marginTop(10)
+                discoverTagButtons.map {
+                    $0.box.marginRight(8).paddingHorizontal(12).marginTop(10)
                 }
-            }.flex.wrap(.wrap)
+            }.wrap(.wrap)
         }
     }
     
@@ -96,11 +96,11 @@ class TaobaoSearchVC: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         if #available(iOS 11, *) {
-            rootFlexContainer.flex.margin(view.safeAreaInsets)
+            rootFlexContainer.box.margin(view.safeAreaInsets)
         } else {
-            rootFlexContainer.flex.margin(topLayoutGuide.length, 0, bottomLayoutGuide.length, 0)
+            rootFlexContainer.box.margin(topLayoutGuide.length, 0, bottomLayoutGuide.length, 0)
         }
         rootFlexContainer.frame = view.bounds
-        rootFlexContainer.flex.layout(mode: .adjustHeight)
+        rootFlexContainer.box.layout(mode: .adjustHeight)
     }
 }

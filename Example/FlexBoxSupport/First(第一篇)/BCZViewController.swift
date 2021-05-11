@@ -67,20 +67,20 @@ class BCZViewController: UIViewController {
         // 这里折中使用屏幕高度百分比来计算值
         
 //        FlexLayout(direction: .vertical, background: rootFlexContainer) {
-//            logoImgV.flex.width(30%).marginTop(ScreenHeight * 0.18).aspectRatio(1)
-//            UIView().flex.grow(1).shrink(1)
+//            logoImgV.box.width(30%).marginTop(ScreenHeight * 0.18).aspectRatio(1)
+//            UIView().box.grow(1).shrink(1)
 //
 //            FlexLayout(direction: .vertical) {
-//                wechatBtn.flex.height(buttonHeight).marginBottom(10)
-//                qqBtn.flex.height(buttonHeight).marginBottom(10)
+//                wechatBtn.box.height(buttonHeight).marginBottom(10)
+//                qqBtn.box.height(buttonHeight).marginBottom(10)
 //                FlexLayout(direction: .horizontal) {
-//                    phoneBtn.flex.width(62%).marginRight(10)
-//                    loginBtn.flex.grow(1)
-//                }.flex.height(buttonHeight)
-//            }.flex.justifyContent(.center).width(73%).height(24%).marginBottom(ScreenHeight * 0.1)
+//                    phoneBtn.box.width(62%).marginRight(10)
+//                    loginBtn.box.grow(1)
+//                }.box.height(buttonHeight)
+//            }.box.justifyContent(.center).width(73%).height(24%).marginBottom(ScreenHeight * 0.1)
 //
-//            otherBtn.flex.marginBottom(20)
-//        }.flex.alignItems(.center)
+//            otherBtn.box.marginBottom(20)
+//        }.box.alignItems(.center)
         
         rootFlexContainer.flex.alignItems(.center).define { flex in
             flex.addItem(logoImgV).width(30%).marginTop(ScreenHeight * 0.18).aspectRatio(1)
@@ -124,12 +124,12 @@ class BCZViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         if #available(iOS 11, *) {
-            rootFlexContainer.flex.margin(view.safeAreaInsets)
+            rootFlexContainer.box.margin(view.safeAreaInsets)
         } else {
-            rootFlexContainer.flex.margin(topLayoutGuide.length, 0, bottomLayoutGuide.length, 0)
+            rootFlexContainer.box.margin(topLayoutGuide.length, 0, bottomLayoutGuide.length, 0)
         }
         rootFlexContainer.frame = view.bounds
-        rootFlexContainer.flex.layout(mode: .fitContainer)
+        rootFlexContainer.box.layout(mode: .fitContainer)
     }
 }
 

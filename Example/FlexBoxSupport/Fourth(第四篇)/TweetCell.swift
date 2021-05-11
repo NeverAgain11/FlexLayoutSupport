@@ -90,8 +90,8 @@ class TweetCell: UITableViewCell {
         FlexLayout(direction: .vertical, background: contentView) {
             FlexLayout(direction: .horizontal, background: UIView()) {
                 
-            }.flex.alignItems(.center).marginTop(13)
-        }.flex.paddingHorizontal(13)
+            }.alignItems(.center).marginTop(13)
+        }.paddingHorizontal(13)
         contentView.flex.paddingHorizontal(13).define { flex in
             
             flex.addItem().direction(.row).alignItems(.center).marginTop(13).define{ flex in
@@ -165,7 +165,7 @@ class TweetCell: UITableViewCell {
             let key = url//.md5
             // 提取宽高尺寸
             if let size = item.picsSize[key] {
-                singleImgV.flex.width(size.width).height(size.height)
+                singleImgV.box.width(size.width).height(size.height)
             } else {
                 let widths = url.regexFind(pattern: "w=([0-9]+)", atGroupIndex: 1)
                 let heights = url.regexFind(pattern: "h=([0-9]+)", atGroupIndex: 1)
@@ -173,7 +173,7 @@ class TweetCell: UITableViewCell {
                 if let width = widths.first, let height = heights.first, let wI = Int(width), let hI = Int(height) {
                     let (w, h) = scaleSize(CGSize(width: CGFloat(wI), height: CGFloat(hI)),
                                            toMax: CGSize(width: ScreenWidth * 0.65, height: 170))
-                    singleImgV.flex.width(w).height(h)
+                    singleImgV.box.width(w).height(h)
                     // 缓存起来
                     item.picsSize[key] = CGSize(width: w, height: h)
                 }
@@ -182,13 +182,13 @@ class TweetCell: UITableViewCell {
         } else if item.pictures.count == 4 {
             // 4张图片
             if item.pictures.count != (self.item?.pictures.count ?? 0) {
-                imagesContainer.flex.marginRight(0)
+                imagesContainer.box.marginRight(0)
             }
             setupImages(from: item)
         } else {
             // 多张图片
             if item.pictures.count != (self.item?.pictures.count ?? 0) {
-                imagesContainer.flex.marginRight(-4)
+                imagesContainer.box.marginRight(-4)
             }
             setupImages(from: item)
         }
@@ -223,7 +223,7 @@ class TweetCell: UITableViewCell {
             item.attributedText = content
             contentLabel.attributedText = content
         }
-        contentLabel.flex.markDirty()
+        contentLabel.box.markDirty()
         self.item = item
         setNeedsLayout()
     }
@@ -238,7 +238,7 @@ class TweetCell: UITableViewCell {
 
     
     func layout() {
-        contentView.flex.layout(mode: .adjustHeight)
+        contentView.box.layout(mode: .adjustHeight)
     }
     
     override func sizeThatFits(_ size: CGSize) -> CGSize {
