@@ -165,7 +165,7 @@ class TweetCell: UITableViewCell {
             let key = url//.md5
             // 提取宽高尺寸
             if let size = item.picsSize[key] {
-                singleImgV.box.width(size.width).height(size.height)
+                singleImgV.layout.width(size.width).height(size.height)
             } else {
                 let widths = url.regexFind(pattern: "w=([0-9]+)", atGroupIndex: 1)
                 let heights = url.regexFind(pattern: "h=([0-9]+)", atGroupIndex: 1)
@@ -173,7 +173,7 @@ class TweetCell: UITableViewCell {
                 if let width = widths.first, let height = heights.first, let wI = Int(width), let hI = Int(height) {
                     let (w, h) = scaleSize(CGSize(width: CGFloat(wI), height: CGFloat(hI)),
                                            toMax: CGSize(width: ScreenWidth * 0.65, height: 170))
-                    singleImgV.box.width(w).height(h)
+                    singleImgV.layout.width(w).height(h)
                     // 缓存起来
                     item.picsSize[key] = CGSize(width: w, height: h)
                 }
@@ -182,13 +182,13 @@ class TweetCell: UITableViewCell {
         } else if item.pictures.count == 4 {
             // 4张图片
             if item.pictures.count != (self.item?.pictures.count ?? 0) {
-                imagesContainer.box.marginRight(0)
+                imagesContainer.layout.marginRight(0)
             }
             setupImages(from: item)
         } else {
             // 多张图片
             if item.pictures.count != (self.item?.pictures.count ?? 0) {
-                imagesContainer.box.marginRight(-4)
+                imagesContainer.layout.marginRight(-4)
             }
             setupImages(from: item)
         }
@@ -223,7 +223,7 @@ class TweetCell: UITableViewCell {
             item.attributedText = content
             contentLabel.attributedText = content
         }
-        contentLabel.box.markDirty()
+        contentLabel.layout.markDirty()
         self.item = item
         setNeedsLayout()
     }
@@ -238,7 +238,7 @@ class TweetCell: UITableViewCell {
 
     
     func layout() {
-        contentView.box.layout(mode: .adjustHeight)
+        contentView.layout.layout(mode: .adjustHeight)
     }
     
     override func sizeThatFits(_ size: CGSize) -> CGSize {

@@ -106,6 +106,11 @@ public struct FlexLayout: _FlexLayoutElementType {
         view.build(builder)
         
         view.flex.direction(direction.direction)
+    }
+    
+    @discardableResult
+    init(background: UIView) {
+        self.view = background
         
     }
     
@@ -131,6 +136,10 @@ extension UIView {
         flex.build(builder)
         return self.flex
     }
+    
+    public var layout: FlexLayout {
+        return FlexLayout(background: self)
+    }
 }
 
 extension UIView: _FlexLayoutElementType {
@@ -139,11 +148,11 @@ extension UIView: _FlexLayoutElementType {
     }
 }
 
-extension BoxKit: _FlexLayoutElementType where Base: UIView {
-    public func make() -> [UIView] {
-        [base]
-    }
-}
+//extension BoxKit: _FlexLayoutElementType where Base: UIView {
+//    public func make() -> [UIView] {
+//        [base]
+//    }
+//}
 
 //extension Flex: _FlexLayoutElementType {
 //    public func make() -> [ViewCapture] {

@@ -65,7 +65,7 @@ class TaobaoSearchVC: UIViewController {
             }.justifyContent(.spaceBetween)
             FlexLayout(direction: .horizontal, background: UIView()) {
                 historyTagButtons.map {
-                    $0.box.marginRight(10).paddingHorizontal(12).marginTop(10)
+                    $0.layout.marginRight(10).paddingHorizontal(12).marginTop(10)
                 }
             }.wrap(.wrap).marginBottom(15)
             FlexLayout(direction: .horizontal, background: UIView()) {
@@ -75,7 +75,7 @@ class TaobaoSearchVC: UIViewController {
             
             FlexLayout(direction: .horizontal, background: UIView()) {
                 discoverTagButtons.map {
-                    $0.box.marginRight(8).paddingHorizontal(12).marginTop(10)
+                    $0.layout.marginRight(8).paddingHorizontal(12).marginTop(10)
                 }
             }.wrap(.wrap)
         }
@@ -96,11 +96,11 @@ class TaobaoSearchVC: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         if #available(iOS 11, *) {
-            rootFlexContainer.box.margin(view.safeAreaInsets)
+            rootFlexContainer.layout.margin(view.safeAreaInsets)
         } else {
-            rootFlexContainer.box.margin(topLayoutGuide.length, 0, bottomLayoutGuide.length, 0)
+            rootFlexContainer.layout.margin(topLayoutGuide.length, 0, bottomLayoutGuide.length, 0)
         }
         rootFlexContainer.frame = view.bounds
-        rootFlexContainer.box.layout(mode: .adjustHeight)
+        rootFlexContainer.layout.layout(mode: .adjustHeight)
     }
 }

@@ -23,12 +23,12 @@ final class DemoViewController: UIViewController {
         super.viewDidLayoutSubviews()
         
         if #available(iOS 11.0, *) {
-            rootFlex.box.marginTop(view.safeAreaInsets.top)
+            rootFlex.layout.marginTop(view.safeAreaInsets.top)
         } else {
-            rootFlex.box.marginTop(topLayoutGuide.length)
+            rootFlex.layout.marginTop(topLayoutGuide.length)
         }
         rootFlex.frame = view.bounds
-        rootFlex.box.layout()
+        rootFlex.layout.layout()
     }
 }
 
@@ -41,18 +41,18 @@ private extension DemoViewController {
         let a = UIView()
         FlexLayout(direction: .vertical, background: rootFlex) {
             UIView().then {
-                $0.box.height(100).backgroundColor(.purple).marginBottom(10)
+                $0.layout.height(100).backgroundColor(.purple).marginBottom(10)
             }
             
             FlexLayout(direction: .horizontal, background: UIView()) {
                 UIView().then {
                     $0.backgroundColor = .yellow
-                    $0.box.height(400)
+                    $0.layout.height(400)
                 }
             }
             UIView().then {
                 $0.backgroundColor = .yellow
-                $0.box.height(400)
+                $0.layout.height(400)
             }
             
         }

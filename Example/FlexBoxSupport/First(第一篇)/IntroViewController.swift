@@ -42,28 +42,28 @@ class IntroViewController: UIViewController {
         
         FlexLayout(direction: .vertical, background: rootFlexContainer) {
             FlexLayout(direction: .horizontal, background: UIView()) {
-//                imageView.box.width(100).aspectRatio(of: imageView)
-//                UIView().box.height(1/UIScreen.main.scale).backgroundColor(.lightGray)
+//                imageView.layout.width(100).aspectRatio(of: imageView)
+//                UIView().layout.height(1/UIScreen.main.scale).backgroundColor(.lightGray)
             }.maxHeight(130).backgroundColor(.purple)
         }.padding(12)
         
         print("rootFlexContainer: ", rootFlexContainer)
 //        rootFlexContainer.build {
 //            FlexLayout(direction: .horizontal, background: UIView()) {
-//                imageView.box.width(100).aspectRatio(of: imageView)
+//                imageView.layout.width(100).aspectRatio(of: imageView)
 //                FlexLayout(direction: .vertical, background: UIView()) {
-//                    segmentedControl.box.marginBottom(12)
-//                    label.box.shrink(1)
-//                }.box.shrink(1).marginLeft(12)
-//            }.box.maxHeight(130)
+//                    segmentedControl.layout.marginBottom(12)
+//                    label.layout.shrink(1)
+//                }.layout.shrink(1).marginLeft(12)
+//            }.layout.maxHeight(130)
             
 //            FlexLayout(direction: .vertical, background: UIView()) {
-////                UIView().box.height(1/UIScreen.main.scale).backgroundColor(.lightGray)
-//                bottomLabel.box.marginTop(60).marginHorizontal(20)
-//            }.box.marginTop(12)
+////                UIView().layout.height(1/UIScreen.main.scale).backgroundColor(.lightGray)
+//                bottomLabel.layout.marginTop(60).marginHorizontal(20)
+//            }.layout.marginTop(12)
 //        }.padding(12)
         
-//        rootFlexContainer.box.padding(12).define { flex in
+//        rootFlexContainer.layout.padding(12).define { flex in
 //            flex.addItem().direction(.row).define { flex in
 //                flex.addItem(imageView).width(100).aspectRatio(of: imageView)
 //                flex.addItem().paddingLeft(12).grow(1).shrink(1).define { flex in
@@ -81,11 +81,11 @@ class IntroViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         if #available(iOS 11, *) {
-            rootFlexContainer.box.margin(view.safeAreaInsets)
+            rootFlexContainer.layout.margin(view.safeAreaInsets)
         } else {
-            rootFlexContainer.box.margin(topLayoutGuide.length, 0, bottomLayoutGuide.length, 0)
+            rootFlexContainer.layout.margin(topLayoutGuide.length, 0, bottomLayoutGuide.length, 0)
         }
         rootFlexContainer.frame = view.bounds
-        rootFlexContainer.box.layout(mode: .adjustHeight)
+        rootFlexContainer.layout.layout(mode: .adjustHeight)
     }
 }

@@ -67,20 +67,20 @@ class BCZViewController: UIViewController {
         // 这里折中使用屏幕高度百分比来计算值
         
 //        FlexLayout(direction: .vertical, background: rootFlexContainer) {
-//            logoImgV.box.width(30%).marginTop(ScreenHeight * 0.18).aspectRatio(1)
-//            UIView().box.grow(1).shrink(1)
+//            logoImgV.layout.width(30%).marginTop(ScreenHeight * 0.18).aspectRatio(1)
+//            UIView().layout.grow(1).shrink(1)
 //
 //            FlexLayout(direction: .vertical) {
-//                wechatBtn.box.height(buttonHeight).marginBottom(10)
-//                qqBtn.box.height(buttonHeight).marginBottom(10)
+//                wechatBtn.layout.height(buttonHeight).marginBottom(10)
+//                qqBtn.layout.height(buttonHeight).marginBottom(10)
 //                FlexLayout(direction: .horizontal) {
-//                    phoneBtn.box.width(62%).marginRight(10)
-//                    loginBtn.box.grow(1)
-//                }.box.height(buttonHeight)
-//            }.box.justifyContent(.center).width(73%).height(24%).marginBottom(ScreenHeight * 0.1)
+//                    phoneBtn.layout.width(62%).marginRight(10)
+//                    loginBtn.layout.grow(1)
+//                }.layout.height(buttonHeight)
+//            }.layout.justifyContent(.center).width(73%).height(24%).marginBottom(ScreenHeight * 0.1)
 //
-//            otherBtn.box.marginBottom(20)
-//        }.box.alignItems(.center)
+//            otherBtn.layout.marginBottom(20)
+//        }.layout.alignItems(.center)
         
         rootFlexContainer.flex.alignItems(.center).define { flex in
             flex.addItem(logoImgV).width(30%).marginTop(ScreenHeight * 0.18).aspectRatio(1)
@@ -120,16 +120,15 @@ class BCZViewController: UIViewController {
         return btn
     }
     
-    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         if #available(iOS 11, *) {
-            rootFlexContainer.box.margin(view.safeAreaInsets)
+            rootFlexContainer.layout.margin(view.safeAreaInsets)
         } else {
-            rootFlexContainer.box.margin(topLayoutGuide.length, 0, bottomLayoutGuide.length, 0)
+            rootFlexContainer.layout.margin(topLayoutGuide.length, 0, bottomLayoutGuide.length, 0)
         }
         rootFlexContainer.frame = view.bounds
-        rootFlexContainer.box.layout(mode: .fitContainer)
+        rootFlexContainer.layout.layout(mode: .fitContainer)
     }
 }
 

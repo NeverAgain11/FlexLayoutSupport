@@ -130,14 +130,14 @@ class MyWalletView: UIView {
             }.grow(1).shrink(1)
             
             FlexLayout(direction: .horizontal) {
-                lockIcon.box.width(20).marginHorizontal(20).aspectRatio(of: lockIcon)
-                depositLabel.box.marginRight(20).grow(1).shrink(1)
-                depositDetailBtn.box.paddingHorizontal(10).marginRight(14)
+                lockIcon.layout.width(20).marginHorizontal(20).aspectRatio(of: lockIcon)
+                depositLabel.layout.marginRight(20).grow(1).shrink(1)
+                depositDetailBtn.layout.paddingHorizontal(10).marginRight(14)
             }.alignItems(.center).height(60).backgroundColor(UIColor(white: 0.93, alpha: 1))
         }
         
         FlexLayout(direction: .vertical, background: mainContainer) {
-            titleLabel.box.marginTop(30).marginBottom(18)
+            titleLabel.layout.marginTop(30).marginBottom(18)
             
             FlexLayout(direction: .vertical, background: posterImgV) {
                 FlexLayout(direction: .vertical) {
@@ -149,11 +149,11 @@ class MyWalletView: UIView {
             FlexLayout(direction: .vertical, background: cardInfoContainer) {
                 FlexLayout(direction: .vertical) {
                     cardTitleLabel
-                    remainDaysLabel.box.marginTop(4)
+                    remainDaysLabel.layout.marginTop(4)
                 }
-                UIView().box.grow(1).shrink(1).backgroundColor(.yellow)
+                UIView().layout.grow(1).shrink(1).backgroundColor(.yellow)
                 tipsLabel
-                daysDetailBtn.box.marginLeft(14).paddingHorizontal(20).height(36)
+                daysDetailBtn.layout.marginLeft(14).paddingHorizontal(20).height(36)
             }.direction(.row).padding(20, 20, 20, 14).backgroundColor(.purple)
             
             balanceView
@@ -172,9 +172,9 @@ class MyWalletView: UIView {
     }
     
     func layout() {
-        rootFlex.box.margin(pin.safeArea)
-        rootFlex.box.layout()
-        mainContainer.box.layout(mode: .adjustHeight)
+        rootFlex.layout.margin(pin.safeArea)
+        rootFlex.layout.layout()
+        mainContainer.layout.layout(mode: .adjustHeight)
     }
     
     override func sizeThatFits(_ size: CGSize) -> CGSize {
@@ -213,12 +213,12 @@ extension MyWalletView {
         
 //        let f = FlexLayout(direction: .vertical) {
 //            FlexLayout(direction: .horizontal) {
-//                titleLabel.box.grow(1).shrink(1)
-//                subtitleLabel.box.marginHorizontal(10)
-//                arrow.box.size(15).alignSelf(.center)
-//            }.box.grow(1)
-//            UIView().box.backgroundColor(UIColor(white: 0.85, alpha: 1)).height(0.5)
-//        }.box.paddingHorizontal(15).height(55)
+//                titleLabel.layout.grow(1).shrink(1)
+//                subtitleLabel.layout.marginHorizontal(10)
+//                arrow.layout.size(15).alignSelf(.center)
+//            }.layout.grow(1)
+//            UIView().layout.backgroundColor(UIColor(white: 0.85, alpha: 1)).height(0.5)
+//        }.layout.paddingHorizontal(15).height(55)
 //        let v = f.view!
         
         
