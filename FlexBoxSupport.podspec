@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FlexBoxSupport'
-  s.version          = '0.1.3'
+  s.version          = '0.2.0'
   s.summary          = 'FunctionBuilder for FlexBoxSupport.'
 
   s.homepage         = 'https://github.com/NeverAgain11/FlexLayoutSupport'
@@ -28,5 +28,5 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-   s.dependency 'FlexLayout', '~> 1.3.20'
+   s.dependency 'FlexLayout', '~> 1.3.24'
 end

@@ -26,7 +26,7 @@ extension Array: _FlexLayoutElementType where Element: _FlexLayoutElementType {
     
 }
 
-@_functionBuilder
+@resultBuilder
 public struct FlexLayoutBuilder {
     
     public static func buildBlock() -> _FlexLayoutElementType {
