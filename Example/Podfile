@@ -2,8 +2,8 @@ use_frameworks!
 
 inhibit_all_warnings!
 
-target 'FlexBoxSupport_Example' do
-  pod 'FlexBoxSupport', :path => '../'
+target 'FlexLayoutSupport_Example' do
+  pod 'FlexLayoutSupport', :path => '../'
   pod 'PinLayout', '1.7.9'
   pod 'Kingfisher', '~> 4.8.0'
   

@@ -1,13 +1,15 @@
 PODS:
-  - FlexBoxSupport (0.1.3):
-    - FlexLayout (~> 1.3.24)
-  - FlexLayout (1.3.24)
+  - FlexLayout (1.3.33)
+  - FlexLayoutSupport (0.2.0):
+    - FlexLayout (~> 1.3.33)
   - Kingfisher (4.8.1)
-  - LookinServer (1.0.6)
+  - LookinServer (1.1.7):
+    - LookinServer/Core (= 1.1.7)
+  - LookinServer/Core (1.1.7)
   - PinLayout (1.7.9)
 
 DEPENDENCIES:
-  - FlexBoxSupport (from `../`)
+  - FlexLayoutSupport (from `../`)
   - Kingfisher (~> 4.8.0)
   - LookinServer
   - PinLayout (= 1.7.9)
@@ -20,16 +22,16 @@ SPEC REPOS:
     - PinLayout
 
 EXTERNAL SOURCES:
-  FlexBoxSupport:
+  FlexLayoutSupport:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FlexBoxSupport: 467b9ad286c61396b409547db84993786e6f7816
-  FlexLayout: 4c4dec5e4aafab84908dd864bb097baebef0d44e
+  FlexLayout: d515437814cc7a6b50d6d2d14da7cd8059f8d6f6
+  FlexLayoutSupport: 86394771c656b85b80d20081cbc72999638316f8
   Kingfisher: 868c1149679a7ab6869be118faa9b5aed154aaf0
-  LookinServer: 18155b1e4a08213c236a1dd6b7ca52328a70a1e3
+  LookinServer: 4ce0469b066871525611d009d8d16a7a50c23491
   PinLayout: 21ce87a865407a7a3c8a38a326611c476095fedf
 
-PODFILE CHECKSUM: f092e9cad3ec0ca04cf899a4bb7b3c4ea306e0ad
+PODFILE CHECKSUM: 18b12480f47224744bc6aaaa9190567673b366fc
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.12.1

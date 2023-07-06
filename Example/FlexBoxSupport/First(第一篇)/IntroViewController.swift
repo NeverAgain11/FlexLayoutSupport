@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import FlexLayout
-
 
 class IntroViewController: UIViewController {
     
@@ -42,8 +40,8 @@ class IntroViewController: UIViewController {
         
         FlexLayout(direction: .vertical, background: rootFlexContainer) {
             FlexLayout(direction: .horizontal, background: UIView()) {
-//                imageView.layout.width(100).aspectRatio(of: imageView)
-//                UIView().layout.height(1/UIScreen.main.scale).backgroundColor(.lightGray)
+                imageView.layout.width(100).aspectRatio(of: imageView)
+                UIView().layout.height(1/UIScreen.main.scale).backgroundColor(.lightGray)
             }.maxHeight(130).backgroundColor(.purple)
         }.padding(12)
         

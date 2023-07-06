@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import FlexLayout
-
 
 class TaobaoSearchVC: UIViewController {
     

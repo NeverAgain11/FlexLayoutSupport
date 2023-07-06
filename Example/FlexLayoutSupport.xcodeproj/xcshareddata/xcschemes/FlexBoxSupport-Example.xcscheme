@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-               BuildableName = "FlexBoxSupport_Example.app"
-               BlueprintName = "FlexBoxSupport_Example"
-               ReferencedContainer = "container:FlexBoxSupport.xcodeproj">
+               BuildableName = "FlexLayoutSupport_Example.app"
+               BlueprintName = "FlexLayoutSupport_Example"
+               ReferencedContainer = "container:FlexLayoutSupport.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -31,7 +31,7 @@
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
                BuildableName = "FlexBoxSupport_Tests.xctest"
                BlueprintName = "FlexBoxSupport_Tests"
-               ReferencedContainer = "container:FlexBoxSupport.xcodeproj">
+               ReferencedContainer = "container:FlexLayoutSupport.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "FlexBoxSupport_Example.app"
-            BlueprintName = "FlexBoxSupport_Example"
-            ReferencedContainer = "container:FlexBoxSupport.xcodeproj">
+            BuildableName = "FlexLayoutSupport_Example.app"
+            BlueprintName = "FlexLayoutSupport_Example"
+            ReferencedContainer = "container:FlexLayoutSupport.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <Testables>
@@ -58,7 +58,7 @@
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
                BuildableName = "FlexBoxSupport_Tests.xctest"
                BlueprintName = "FlexBoxSupport_Tests"
-               ReferencedContainer = "container:FlexBoxSupport.xcodeproj">
+               ReferencedContainer = "container:FlexLayoutSupport.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -78,9 +78,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "FlexBoxSupport_Example.app"
-            BlueprintName = "FlexBoxSupport_Example"
-            ReferencedContainer = "container:FlexBoxSupport.xcodeproj">
+            BuildableName = "FlexLayoutSupport_Example.app"
+            BlueprintName = "FlexLayoutSupport_Example"
+            ReferencedContainer = "container:FlexLayoutSupport.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "FlexBoxSupport_Example.app"
-            BlueprintName = "FlexBoxSupport_Example"
-            ReferencedContainer = "container:FlexBoxSupport.xcodeproj">
+            BuildableName = "FlexLayoutSupport_Example.app"
+            BlueprintName = "FlexLayoutSupport_Example"
+            ReferencedContainer = "container:FlexLayoutSupport.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import FlexLayout
 
 let ScreenHeight = UIScreen.main.bounds.height
 let ScreenWidth = UIScreen.main.bounds.width
